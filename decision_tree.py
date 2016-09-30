@@ -12,7 +12,7 @@ def load_data():
     """
 
     # Load the training data from the CSV file
-    training_data = np.genfromtxt('training.csv', delimiter=',', dtype=np.int32)
+    training_data = np.genfromtxt('dataset.csv', delimiter=',', dtype=np.int32)
 
     """
     Each row of the CSV file contains the features collected on a website
@@ -38,17 +38,25 @@ def load_data():
 
 
 if __name__ == '__main__':
+    print "Tutorial: Training a decision tree to detect phishing websites"
+
     # Load the training data
     train_inputs, train_outputs, test_inputs, test_outputs = load_data()
+    print "Training data loaded."
 
     # Create a decision tree classifier model using scikit-learn
     classifier = tree.DecisionTreeClassifier()
+    print "Decision tree classifier created."
 
+    print "Beginning model training."
     # Train the decision tree classifier
     classifier.fit(train_inputs, train_outputs)
+    print "Model training completed."
 
     # Use the trained classifier to make predictions on the test data
     predictions = classifier.predict(test_inputs)
+    print "Predictions on testing data computed."
 
-    # Return the accuracy (percentage of phishing websites correctly predicted)
-    print accuracy_score(test_outputs, predictions)
+    # Print the accuracy (percentage of phishing websites correctly predicted)
+    accuracy = 100.0 * accuracy_score(test_outputs, predictions)
+    print "The accuracy of your decision tree on testing data is: " + str(accuracy)
