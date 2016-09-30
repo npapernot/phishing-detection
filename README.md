@@ -103,3 +103,8 @@ take a look at the `scikit-learn`
 You can also try different models like 
 [Support Vector Machines](http://scikit-learn.org/stable/modules/svm.html) 
 or [Neural Networks](http://scikit-learn.org/dev/modules/neural_networks_supervised.html). 
+
+## Questions or suggestions
+
+If you have any questions or suggestions, feel free to send me an email
+at [`nicolas@papernot.fr`](mailto:nicolas@papernot.fr).
