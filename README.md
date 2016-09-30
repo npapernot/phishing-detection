@@ -103,6 +103,8 @@ take a look at the `scikit-learn`
 You can also try different models like 
 [Support Vector Machines](http://scikit-learn.org/stable/modules/svm.html) 
 or [Neural Networks](http://scikit-learn.org/dev/modules/neural_networks_supervised.html). 
+For instance, in [this file]((https://github.com/npapernot/phishing-detection/blob/master/logistic_regression.py), the machine learning model is now a logistic
+regression, but it performs worse than the decision tree. 
 
 ## Questions or suggestions
 
